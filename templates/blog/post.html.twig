@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post alone{% endblock %}
+
+{% block body %}
+
+    <p>ID {{ id }}</p>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.text }}</p>
+    <p>{{ post.date|date('H:i:s') }}</p>
+    <p>{{ 5897|price }}</p>
+    Here is the current language {{ locale }} <br>
+    <p> Here is your global: {{ message }}  </p> <br>
+    <p> Env: {{ app.environment }}  </p> <br>
+    <p> User: {{ app.user }}  </p> <br>
+    <p> Request: {{ app.request }}  </p> <br>
+    <p> Session started: {{ app.session.isStarted }}  </p> <br>
+    <p> Debug {{ app.debug }}  </p> <br>
+
+{% endblock %}
